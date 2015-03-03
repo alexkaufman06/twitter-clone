@@ -3,10 +3,12 @@ Twitter.PostsController = Ember.ArrayController.extend({
   sortAscending: false,
   actions: {
     save: function() {
+      var time = new Date;
+      var mins = time.getMinutes();
       var newTweet = this.store.createRecord('post', {
         user: this.get('user'),
         tweet: this.get('tweet'),
-        time: new Date
+        time: mins
       });
       newTweet.save();
     }
