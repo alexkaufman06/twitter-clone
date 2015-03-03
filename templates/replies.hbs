@@ -1,0 +1,10 @@
+<ul>
+  {{#each reply}}
+    <li>{{responder}}: {{reply}}</li>
+  {{/each}}
+</ul>
+<form>
+  {{input id="responder" class="form-control" value=responder placeholder="User Name"}}
+  {{input id="reply" class="form-control" value=reply placeholder="Tweet!"}}
+  <button class="btn btn-info" {{action 'reply'}}>¡Reply!</button>
+</form>

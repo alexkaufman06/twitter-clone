@@ -1,4 +1,5 @@
 Twitter.PostsController = Ember.ArrayController.extend({
+  itemController: 'post',
   sortProperties: ['time'],
   sortAscending: false,
   actions: {
@@ -8,10 +9,9 @@ Twitter.PostsController = Ember.ArrayController.extend({
       var newTweet = this.store.createRecord('post', {
         user: this.get('user'),
         tweet: this.get('tweet'),
-        time: mins
+        time: mins,
       });
       newTweet.save();
     }
-
   }
 });

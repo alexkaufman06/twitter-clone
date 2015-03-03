@@ -6,7 +6,23 @@
   </form>
   <ul>
     {{#each}}
-      <li>{{user}}: {{tweet}} {{time}}m</li>
+      <li>{{user}}: {{tweet}} {{time}}m
+        <a class="btn btn-info" {{action "show"}}>
+            <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span>
+        </a>
+      </li>
+      {{#if replyShow}}
+      <ul>
+        {{#each replies}}
+        <li>{{responder}}: {{reply}}</li>
+        {{/each}}
+      </ul>
+      <form>
+        {{input id="responder" class="form-control" value=responder placeholder="User Name"}}
+        {{input id="reply" class="form-control" value=reply placeholder="Tweet!"}}
+        <button class="btn btn-info" {{action 'reply'}}>¡Reply!</button>
+      </form>
+      {{/if}}
     {{/each}}
   </ul>
 </div>
