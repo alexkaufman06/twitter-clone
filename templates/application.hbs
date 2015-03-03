@@ -1,0 +1,46 @@
+<div class="container">
+  <nav class='navbar navbar-default' role='navigation'>
+    <ul class='nav navbar-nav'>
+      <li>{{#link-to 'posts'}}Home{{/link-to}}</li>
+    </ul>
+    <ul class='nav navbar-nav navbar-right'>
+      <!--  search input -->
+    </ul>
+  </nav>
+  <div class='row'>
+    <div class="col-xs-3">
+      <div>
+        <h4>Ruby Tuesdays</h4>
+        <ul>
+          <li>Tweets</li>
+          <li>Following</li>
+          <li>Followers</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Trends</h4>
+        <ul>
+          <li>#RailsRailsRails</li>
+          <li>params.fetch</li>
+          <li>#allthegems</li>
+          <li>GOSU</li>
+          <li>Epicodus</li>
+          <li>Ruby Brigade</li>
+        </ul>
+      </div>
+    </div>
+
+    {{outlet}}
+
+    <div class="col-xs-3">
+      <div>
+        <h4>Who to Follow</h4>
+        <ul>
+          <li>Ruby PDX</li>
+          <li>Switchboard</li>
+          <li>Epicodus</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div
