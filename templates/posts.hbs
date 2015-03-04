@@ -1,7 +1,7 @@
 <div class='col-xs-6'>
   <form>
     {{input id="user" class="form-control" value=user placeholder="User Name"}}
-    {{input id="tweet" class="form-control" value=tweet placeholder="Tweet!"}}
+    {{input id="tweet" class="form-control" value=tweet placeholder="Tweet!" maxlength="144"}}
     <button class="btn btn-info" {{action 'save'}}>¡Tweet!</button>
   </form>
   <ul>
@@ -19,7 +19,7 @@
       </ul>
       <form>
         {{input id="responder" class="form-control" value=responder placeholder="User Name"}}
-        {{input id="reply" class="form-control" value=reply placeholder="Tweet!"}}
+        {{input id="reply" class="form-control" value=reply placeholder="Tweet!" maxlength="144"}}
         <button class="btn btn-info" {{action 'reply'}}>¡Reply!</button>
       </form>
       {{/if}}
